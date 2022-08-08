@@ -1,4 +1,4 @@
-const returnLastObject = (keysSequence, nestedObject) => {
+const getValueOfLastNestedObject = (keysSequence, nestedObject) => {
   const keysArray = keysSequence.split(".");
   let tempObj = nestedObject;
   for (key of keysArray) {

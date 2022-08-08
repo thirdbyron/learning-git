@@ -1,13 +1,13 @@
 const getValueOfLastNestedObject = (keysSequence, nestedObject) => {
   const keysArray = keysSequence.split(".");
-  let tempObj = nestedObject;
+  let lastNestedObject = nestedObject;
   for (key of keysArray) {
-    if (tempObj[key]) {
-      tempObj = tempObj[key];
+    if (lastNestedObject[key]) {
+      lastNestedObject = lastNestedObject[key];
     } else {
       return undefined;
     }
   }
-  return tempObj;
+  return lastNestedObject;
 }
 
